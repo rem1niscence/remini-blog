@@ -1,0 +1,7 @@
+html {
+  border-top: none;
+}
+
+body.max-width {
+    max-width: 72em;
+  }
