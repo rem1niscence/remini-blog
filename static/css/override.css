@@ -3,5 +3,13 @@ html {
 }
 
 body.max-width {
-    max-width: 72em;
-  }
+  max-width: 72em;
+}
+
+h2::before {
+  content: none !important;
+}
+
+.tag-cloud-tags a {
+  font-size: 1em !important;
+}

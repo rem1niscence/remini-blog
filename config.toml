@@ -1,24 +1,17 @@
-baseURL = "http://example.org/"
+baseURL = "http://remini.dev/"
 languageCode = "en-us"
-title = "Remini's blog"
-copyright = "Roniel Valdez"
-
+title = "Roniel Valdez's Blog"
 
 theme = "cactus"
+copyright = "Roniel Valdez"
 
-[params]
-  colortheme = "dark"
-  css = ["css/override.css"]
-  description = "Hugo is a general-purpose website framework. Technically speaking, Hugo is a static site generator. Unlike systems that dynamically build a page with each visitor request, Hugo builds pages when you create or update your content. Since websites are viewed far more often than they are edited, Hugo is designed to provide an optimal viewing experience for your website’s end users and an ideal writing experience for website authors."
-
-# Main menu which appears below site header.
 [[menu.main]]
 name = "Home"
 url = "/"
 weight = 1
 
 [[menu.main]]
-name = "All posts"
+name = "Writings"
 url = "/posts"
 weight = 2
 
@@ -32,14 +25,43 @@ name = "About"
 url = "/about"
 weight = 4
 
-[[params.social]]
-  name = "github"
-  link = "https://github.com/rem1niscence"
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
 
-[[params.social]]
-  name = "email"
-  link = "roniel_valdez@outlook.com"
+[params]
+  css = ["css/override.css"]
 
-[[params.social]]
-  name = "linkedin"
-  link = "https://www.linkedin.com/in/ronielvaldez/"
+  colortheme = "dark"
+  rss = true 
+
+  # Home page settings
+  description = "Hello my name is Roniel Valdez and I'm a Software engineer from the Carribean 🏝. I'm currently working as a Golang Serverless Engineer (AWS) and personally focused on self-studying golang-related content and distributed systems architecture."
+  mainSection = "posts" 
+  showAllPostsOnHomePage = false # default
+  postsOnHomePage = 5 
+  tagsOverview = false 
+  showProjectsList = false 
+  projectsUrl = "https://github.com/rem1niscence"
+
+  # https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
+  dateFormat = "2006-01-02" # 
+
+  # Post page settings
+  show_updated = false # default
+
+  [params.comments]
+    enabled = false 
+    # engine = "disqus"
+
+  [[params.social]]
+    name = "github"
+    link = "https://github.com/rem1niscence"
+  [[params.social]]
+    name = "linkedin"
+    link = "https://www.linkedin.com/in/ronielvaldez/"
+  # [[params.social]]
+    # name = "email"
+    # link = "email@email.com" 
