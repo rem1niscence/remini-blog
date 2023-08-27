@@ -34,7 +34,7 @@ jobs:
         path: public/
 
     - name: Delete existing release
-      uses: dev-drprasad/delete-tag-and-release@v0.1.2
+      uses: dev-drprasad/delete-tag-and-release@v1.0
       with:
         tag_name: latest
         delete_release: true
