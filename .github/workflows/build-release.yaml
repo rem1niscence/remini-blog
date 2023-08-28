@@ -47,5 +47,5 @@ jobs:
         body: Static files containing the hugo build of the site
         tag_name: latest
         files: |
-            public
+            public/index.xml
         target_commitish: ${{ secrets.GITHUB_REF_NAME }}
