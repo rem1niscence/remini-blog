@@ -30,7 +30,7 @@ jobs:
     - name: Archive production artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: public
+        name: public.zip
         path: public/
 
     - name: Delete existing release
@@ -46,5 +46,5 @@ jobs:
         name: Blog files
         body: Static files containing the hugo build of the site
         tag_name: latest
-        files: public
+        files: public.zip
         target_commitish: ${{ secrets.GITHUB_REF_NAME }}
