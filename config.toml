@@ -1,4 +1,4 @@
-baseURL = "https://remini.dev/"
+baseURL = "https://remini.dev"
 languageCode = "en-us"
 title = "Roniel Valdez's Blog"
 
@@ -35,25 +35,24 @@ weight = 4
   css = ["css/override.css"]
 
   colortheme = "dark"
-  rss = true 
+  rss = true
 
   # Home page settings
-  description = "Hello my name is Roniel Valdez and I'm a Software engineer from the Carribean 🏝. I'm currently working as a Golang Serverless Engineer (AWS) and personally focused on self-studying golang-related content and distributed systems architecture."
-  mainSection = "posts" 
+  description = "Ideas I get over time"
+  mainSection = "posts"
   showAllPostsOnHomePage = false # default
-  postsOnHomePage = 5 
-  tagsOverview = false 
-  showProjectsList = false 
+  postsOnHomePage = 5
+  tagsOverview = false
+  showProjectsList = false
   projectsUrl = "https://github.com/rem1niscence"
 
-  # https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
-  dateFormat = "2006-01-02" # 
+  dateFormat = "2006-01-02" #
 
   # Post page settings
   show_updated = false # default
 
   [params.comments]
-    enabled = false 
+    enabled = false
     # engine = "disqus"
 
   [[params.social]]
@@ -64,4 +63,4 @@ weight = 4
     link = "https://www.linkedin.com/in/ronielvaldez/"
   # [[params.social]]
     # name = "email"
-    # link = "email@email.com" 
+    # link = "email@email.com"

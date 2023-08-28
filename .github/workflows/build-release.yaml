@@ -1,0 +1,49 @@
+name: Build and Release
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        submodules: true
+        fetch-depth: 0
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: 'latest'
+        extended: true
+
+    - name: Build
+      run: hugo --minify
+
+    - name: Zip
+      run: zip -r public.zip public/
+
+    - name: Delete existing release
+      uses: dev-drprasad/delete-tag-and-release@v1.0
+      with:
+        tag_name: latest
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        delete_release: true
+
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with:
+        name: Blog files
+        body: Static files containing the hugo build of the site
+        tag_name: latest
+        draft: false
+        files: |
+            public.zip
+        target_commitish: ${{ github.sha }}
