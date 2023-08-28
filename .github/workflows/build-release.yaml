@@ -27,11 +27,11 @@ jobs:
     - name: Build
       run: hugo --minify
 
-    - name: Archive production artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: public.zip
-        path: public/
+    # - name: Archive production artifacts
+    #   uses: actions/upload-artifact@v3
+    #   with:
+    #     name: public.zip
+    #     path: public/
 
     - name: Delete existing release
       uses: dev-drprasad/delete-tag-and-release@v1.0
@@ -46,5 +46,6 @@ jobs:
         name: Blog files
         body: Static files containing the hugo build of the site
         tag_name: latest
-        files: public.zip
+        files: |
+            public
         target_commitish: ${{ secrets.GITHUB_REF_NAME }}
