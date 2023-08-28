@@ -39,6 +39,7 @@ jobs:
 
     - name: Release
       uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
       with:
         name: Blog files
         body: Static files containing the hugo build of the site
