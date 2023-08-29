@@ -41,7 +41,7 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         name: Blog files
-        body: Static files containing the hugo build of the site
+        body: Static files containing the hugo build of the blog
         draft: false
         tag_name: latest
         prerelease: false
