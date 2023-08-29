@@ -3,7 +3,7 @@ name: Build and Release
 on:
   push:
     branches:
-      - fix-ci
+      - master
 
 jobs:
   build-release:
