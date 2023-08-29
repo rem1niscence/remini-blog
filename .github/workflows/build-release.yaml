@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - fix-draft-ci
 
 jobs:
   build-release:
