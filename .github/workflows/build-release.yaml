@@ -3,7 +3,7 @@ name: Build and Release
 on:
   push:
     branches:
-      - master
+      - fix-ci
 
 jobs:
   build-release:
@@ -42,8 +42,8 @@ jobs:
       with:
         name: Blog files
         body: Static files containing the hugo build of the site
-        tag_name: latest
         draft: false
+        tag_name: latest
         prerelease: false
         files: |
             public.zip
