@@ -44,6 +44,7 @@ jobs:
         name: Blog files
         body: Static files containing the hugo build of the site
         tag_name: latest
+        # draft: false
         prerelease: false
         files: |
             public.zip
