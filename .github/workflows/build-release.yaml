@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - fix-draft-ci
 
 jobs:
   build-release:
@@ -43,7 +44,7 @@ jobs:
         name: Blog files
         body: Static files containing the hugo build of the site
         tag_name: latest
-        draft: false
+        # draft: false
         prerelease: false
         files: |
             public.zip
