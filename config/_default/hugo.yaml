@@ -1,4 +1,4 @@
-baseURL: "/"
+baseURL: "https://remini.dev/"
 languageCode: "en-us"
 title: "Roniel Valdez's Blog"
 theme: "cactus"
