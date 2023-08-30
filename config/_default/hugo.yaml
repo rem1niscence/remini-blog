@@ -1,0 +1,47 @@
+baseURL: "/"
+languageCode: "en-us"
+title: "Roniel Valdez's Blog"
+theme: "cactus"
+copyright: "Roniel Valdez"
+menu:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 1
+    - name: "Writings"
+      url: "/posts"
+      weight: 2
+    - name: "Tags"
+      url: "/tags"
+      weight: 3
+    - name: "About"
+      url: "/about"
+      weight: 4
+markup:
+  tableOfContents:
+    endLevel: 4
+    ordered: false
+    startLevel: 2
+params:
+  css: ["css/override.css"]
+  colortheme: "dark"
+  rss: true
+  description: "Ideas I get over time"
+  mainSection: "posts"
+  showAllPostsOnHomePage: false
+  postsOnHomePage: 5
+  tagsOverview: false
+  showProjectsList: false
+  projectsUrl: "https://github.com/rem1niscence"
+  dateFormat: "2006-01-02"
+  show_updated: false
+  comments:
+    enabled: false
+    # engine: "disqus" # It's commented out in the original TOML
+  social:
+    - name: "github"
+      link: "https://github.com/rem1niscence"
+    - name: "linkedin"
+      link: "https://www.linkedin.com/in/ronielvaldez/"
+    # - name: "email"  # These are commented out in the original TOML
+    #   link: "email@email.com"
