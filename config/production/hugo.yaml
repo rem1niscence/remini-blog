@@ -1,6 +1,6 @@
 params:
   umamiAnalytics:
     enabled: true
-    id: fe90fc64-add1-48db-a241-1ca4f29a0468
+    id: 0df6581d-c38f-46f0-9221-ec80c4145147
     host: analytics.remini.dev
     scriptName: script.js
